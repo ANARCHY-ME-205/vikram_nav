@@ -1,5 +1,4 @@
 
-controller_frequency: 10.0
 TebLocalPlannerROS:
 
  odom_topic: odom
@@ -16,11 +15,11 @@ TebLocalPlannerROS:
     
  # Robot
          
- max_vel_x: 500
- max_vel_x_backwards: 500
- max_vel_theta: 500
- acc_lim_x: 500
- acc_lim_theta: 500
+ max_vel_x: 2
+ max_vel_x_backwards: 2
+ max_vel_theta: 1
+ acc_lim_x: 1
+ acc_lim_theta: 0.5
  min_turning_radius: 0.0
 
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
@@ -76,3 +75,7 @@ TebLocalPlannerROS:
  obstacle_keypoint_offset: 0.1
  obstacle_heading_threshold: 0.45
  visualize_hc_graph: False
+
+
+base_local_planner: teb_local_planner/TebLocalPlannerROS
+controller_frequency: 10.0
