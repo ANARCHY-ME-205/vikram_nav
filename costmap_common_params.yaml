@@ -11,6 +11,7 @@
 # point_cloud_sensor: {sensor_frame: "zed_camera", data_type: PointCloud2, topic: /camera/depth/points, marking: true, clearing: true}
 
   plugins: 
+    - {name: static_layer,       type: "costmap_2d::StaticLayer"}
     - {name: obstacles,        type: "costmap_2d::ObstacleLayer"}
     - {name: inflation,        type: "costmap_2d::InflationLayer"}
   
@@ -42,3 +43,6 @@
     inflation_radius: 0.5
     cost_scaling_factor: 10.0
     
+  static_layer:
+    map_topic: "/map"
+    first_map_only: false
