@@ -1,13 +1,13 @@
 global_costmap:
-  global_frame: odom
+  global_frame: map
   robot_base_frame: base_link
   update_frequency: 10.0
   static_map: true
   rolling_window: false
-  origin_x: 0.0
-  origin_y: 0.0
+  origin_x: -50
+  origin_y: -50
 
   
-  width: 52.0  # Adjust the width according to your requirements
-  height: 52.0  # Adjust the height according to your requirements
+  width: 100  # Adjust the width according to your requirements
+  height: 100  # Adjust the height according to your requirements
   

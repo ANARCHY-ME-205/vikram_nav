@@ -2,8 +2,8 @@
 
    <master auto="start"/>
 
-   <!-- <arg name="map_file" value="/home/tamoghna/catkin_ws/src/vikram_nav/mymap.yaml"/> 
-   <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)" output="screen"/> -->
+   <!-- <arg name="map_file" value="$(find vikram_nav)/mymap.yaml"/> 
+   <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)" output="screen"/>  -->
 
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find vikram_nav)/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
